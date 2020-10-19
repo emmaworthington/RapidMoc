@@ -1,0 +1,68 @@
+[temperature]
+var = thetao
+xcoord = nav_lon
+ycoord = nav_lat
+zcoord = deptht
+tcoord = time_counter
+i1 = 0
+i2 = 820
+j1 = 0
+j2 = 1
+fill_missing_coords=True
+
+[salinity]
+var = so
+xcoord = nav_lon
+ycoord = nav_lat
+zcoord = deptht
+tcoord = time_counter
+i1 = 0
+i2 = 820
+j1 = 0
+j2 = 1
+fill_missing_coords=True
+
+[meridional_velocity]
+var = vo
+xcoord = nav_lon
+ycoord = nav_lat
+zcoord = depthv
+tcoord = time_counter
+i1 = 0
+i2 = 820
+j1 = 0
+j2 = 1
+fill_missing_coords=True
+
+[taux]
+var = taum
+xcoord = nav_lon
+ycoord = nav_lat
+tcoord = time_counter
+i1 = 0
+i2 = 820
+j1 = 0
+j2 = 1
+fill_missing_coords=True
+
+[options]
+georef_level = 4750
+ekman_depth = 50
+fc_minlon = -81.0
+fc_maxlon = -78.4
+wbw_maxlon = -76.1
+int_maxlon = -10.
+ek_profile_type = linear
+reference_salinity = 35.17
+
+[observations]
+heat_transports=/Users/emmaworthington/OneDrive/PhD/Data/rapid/rapid_mocha_wbts_ts_v2018_2/mocha_mht_data_ERA5_v2018_2.nc
+volume_transports=/Users/emmaworthington/OneDrive/PhD/Data/rapid/rapid_mocha_wbts_ts_v2018_2/moc_transports_200404_201893.nc
+streamfunctions=/Users/emmaworthington/OneDrive/PhD/Data/rapid/rapid_mocha_wbts_ts_v2018_2/moc_vertical_200404_201893.nc
+florida_current=/Users/emmaworthington/OneDrive/PhD/Data/wbts/florida_current/FC_cable_transport_1982-2018.nc
+time_avg=monthly
+
+[output]
+date_format=%%Y%%m
+plot=True
+outdir=/Users/emmaworthington/PhD-repositories/RapidMoc/my_data/output/
